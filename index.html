@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TDK：核心关键词前置，长度符合百度展示规范 -->
+    <title>太原道路救援_24小时汽车拖车搭电换胎_附近高速道路救援</title>
+    <meta name="description" content="悟空道路救援是太原专业24小时道路救援服务商，提供汽车拖车、电瓶搭电、上门换胎补胎、紧急送油、困境救援、长途车辆托运等服务，就近派车，快速到达现场，收费透明无隐形消费，救援电话：400-808-2010">
+    <meta name="keywords" content="太原道路救援,太原汽车拖车,太原搭电换胎,24小时汽车救援,附近道路救援电话">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #f7f9fc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        .header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+        .nav {
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #045FEE;
+        }
+        .nav-phone {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e63946;
+        }
+
+        /* 首屏Hero */
+        .hero {
+            background: linear-gradient(135deg, #045FEE 0%, #003d99 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero-sub {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .hero-phone {
+            display: inline-block;
+            background: #e63946;
+            color: #fff;
+            font-size: 28px;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-bottom: 15px;
+        }
+        .hero-tip {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* 通用板块 */
+        .section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        .section:nth-child(even) {
+            background: #f7f9fc;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 40px;
+            color: #222;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #045FEE;
+            margin: 15px auto 0;
+        }
+
+        /* 服务项目 */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+        .service-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .service-item h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #045FEE;
+        }
+
+        /* 服务范围 */
+        .area-list {
+            max-width: 800px;
+            margin: 0 auto;
+            columns: 2;
+            line-height: 2;
+        }
+        .area-list li {
+            list-style: none;
+            padding-left: 20px;
+            position: relative;
+        }
+        .area-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #045FEE;
+            font-weight: bold;
+        }
+
+        /* 优势网格 */
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .advantage-item {
+            padding: 25px 15px;
+        }
+        .advantage-item h4 {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #222;
+        }
+
+        /* 救援流程 */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .step {
+            text-align: center;
+            flex: 1;
+            position: relative;
+        }
+        .step-num {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            background: #045FEE;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0 auto 15px;
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .faq-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        /* 联系底部 */
+        .contact-box {
+            background: linear-gradient(135deg, #045FEE 0%, #003d99 100%);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .contact-box h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .contact-phone {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        /* 页脚 */
+        .footer {
+            background: #222;
+            color: #999;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* 悬浮电话按钮（移动端） */
+        .float-phone {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #e63946;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(230,57,70,0.4);
+            z-index: 99;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 26px; }
+            .hero-phone { font-size: 22px; padding: 12px 30px; }
+            .service-grid { grid-template-columns: 1fr; }
+            .advantage-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-steps { flex-direction: column; gap: 20px; }
+            .area-list { columns: 1; }
+            .float-phone { display: block; }
+            .nav-phone { font-size: 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="header">
+    <div class="container nav">
+        <div class="logo">悟空道路救援道路救援</div>
+        <div class="nav-phone">救援热线：400-808-2010</div>
+    </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero">
+    <div class="container">
+        <h1>太原24小时道路救援 随时待命</h1>
+        <p class="hero-sub">专业拖车 · 搭电启动 · 换胎补胎 · 困境救援 · 就近派车</p>
+        <a href="tel:400-808-2010" class="hero-phone">400-808-2010</a>
+        <p class="hero-tip">全天在线 · 15分钟到达 · 收费透明</p>
+    </div>
+</section>
+
+<!-- 服务项目 -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">我们的救援服务</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>汽车拖车救援</h3>
+                <p>太原全区及周边高速路段拖车服务，故障车、事故车、违停车辆均可托运，平板车专业运输，保护爱车安全。</p>
+            </div>
+            <div class="service-item">
+                <h3>电瓶搭电启动</h3>
+                <p>汽车电瓶亏电无法启动，上门搭电打火，快速解决没电问题，太原城区内短时间即可到达现场。</p>
+            </div>
+            <div class="service-item">
+                <h3>上门换胎补胎</h3>
+                <p>轮胎爆胎、漏气、扎钉，提供上门换备胎、应急补胎服务，携带专业工具，原地解决轮胎故障。</p>
+            </div>
+            <div class="service-item">
+                <h3>紧急送油送水</h3>
+                <p>车辆半路没油抛锚，紧急配送燃油；水箱缺水、防冻液不足，就近送液补给，解您燃眉之急。</p>
+            </div>
+            <div class="service-item">
+                <h3>困境救援脱困</h3>
+                <p>车辆陷入泥地、沟坎、台阶、雪地等困境，专业脱困设备与技师，太原全境提供困境救援服务。</p>
+            </div>
+            <div class="service-item">
+                <h3>长途车辆托运</h3>
+                <p>跨省市长途拖车、私家车托运、二手车运输，门到门服务，全程保险保障，安全直达目的地。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 服务范围 -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">服务覆盖区域</h2>
+        <ul class="area-list">
+            <li>太原主城区各街道及周边乡镇</li>
+            <li>太原各大高速路口及服务区</li>
+            <li>太原工业园区、开发区、景区</li>
+            <li>太原各高速路段沿线救援</li>
+            <li>周边区县就近派车，快速响应</li>
+            <li>24小时全天候，无节假日休息</li>
+        </ul>
+    </div>
+</section>
+
+<!-- 救援优势 -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">为什么选择我们</h2>
+        <div class="advantage-grid">
+            <div class="advantage-item">
+                <div class="step-num">1</div>
+                <h4>24小时待命</h4>
+                <p>全年无休，全天24小时在线接单，深夜凌晨也能快速出警</p>
+            </div>
+            <div class="advantage-item">
+                <div class="step-num">2</div>
+                <h4>就近派车</h4>
+                <p>太原全区布局救援网点，系统智能匹配最近车辆，极速到达</p>
+            </div>
+            <div class="advantage-item">
+                <div class="step-num">3</div>
+                <h4>收费透明</h4>
+                <p>报价前明确收费标准，无隐形消费，中途不加价，放心选择</p>
+            </div>
+            <div class="advantage-item">
+                <div class="step-num">4</div>
+                <h4>专业正规</h4>
+                <p>专业救援技师团队，配套齐全设备，资质齐全，安全有保障</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 救援流程 -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">救援服务流程</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h4>电话咨询</h4>
+                <p>拨打救援热线，说明位置与车况</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h4>就近派单</h4>
+                <p>匹配最近救援车辆，立即出发</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h4>现场救援</h4>
+                <p>技师到场作业，快速排除故障</p>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <h4>付款确认</h4>
+                <p>服务完成确认，支持多种支付方式</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">常见问题</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <h3>太原道路救援一般多少钱？</h3>
+                <p>救援费用根据具体服务项目、距离远近而定，搭电、换胎等基础服务价格亲民，拖车按里程计费。我们承诺报价透明，先报价后服务，无任何隐形消费，详情可致电400-808-2010咨询。</p>
+            </div>
+            <div class="faq-item">
+                <h3>高速上坏车可以救援吗？</h3>
+                <p>可以。我们提供太原境内各高速路段救援服务，包括高速拖车、搭电、换胎等。请您将车辆移至应急车道，做好安全警示后拨打我们的救援电话，我们会尽快安排车辆前往。</p>
+            </div>
+            <div class="faq-item">
+                <h3>汽车没电搭电一次多少钱？</h3>
+                <p>太原城区内搭电服务价格统一，具体可来电咨询。包含技师上门与搭电操作费用，成功启动后付款，若电瓶损坏无法搭电，也可协助更换电瓶。</p>
+            </div>
+            <div class="faq-item">
+                <h3>多久能到达现场？</h3>
+                <p>正常情况下，太原主城区15-30分钟到达，郊区及周边乡镇30-60分钟到达，具体时间视路况和位置而定，我们会始终以最快速度抵达您身边。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 联系板块 -->
+<section class="contact-box">
+    <div class="container">
+        <h2>太原24小时道路救援热线</h2>
+        <p>随时为您保驾护航，一个电话，快速到达</p>
+        <div class="contact-phone">400-808-2010</div>
+        <p>服务时间：全天24小时 · 全年无休</p>
+    </div>
+</section>
+
+<!-- 页脚 -->
+<footer class="footer">
+    <div class="container">
+        <p>© 2026 悟空道路救援道路救援服务中心 版权所有</p>
+        <p style="margin-top:5px;">太原专业汽车救援服务商 | 救援电话：400-808-2010</p>
+    </div>
+</footer>
+
+<!-- 悬浮电话按钮 -->
+<a href="tel:400-808-2010" class="float-phone">📞</a>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "悟空道路救援道路救援",
+    "telephone": "400-808-2010",
+    "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "太原",
+        "addressCountry": "CN"
+    },
+    "openingHours": "24/7",
+    "serviceArea": "太原及周边地区",
+    "description": "太原专业24小时道路救援，提供拖车、搭电、换胎、送油、困境救援等服务"
+}
+</script>
+
+</body>
+</html>
